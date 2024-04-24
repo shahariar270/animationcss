@@ -1,0 +1,349 @@
+
+.sliderImge {
+     margin: auto;
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    animation: slider 20s infinite;
+    
+}
+@keyframes slider {
+    0%{
+        background-image: url(IMG20211031162527_00.jpg);
+    }
+    25%{
+        background-image: url(IMG20211106133324_00.jpg);
+        
+    }
+    75%{
+        background-image: url(IMG_20190606_132622.jpg);
+    }
+    100%{
+        background-image: url(IMG_20190820_093338.jpg);
+    }
+}
+.loding {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-top: 5px solid #fa0d0d;
+    border-left: 5px solid #ffd900;
+    border-right: 5px solid #0d87fa ;
+    border-bottom: 5px solid #0dfa78;
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+.area {
+    background-color: rgb(67, 117, 101);
+    height: 500px;
+    width: 500px;
+    margin: auto;  
+}
+.boll {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 20px;
+    
+    animation: boll 5s linear infinite;
+     position: fixed; 
+}
+.stick {
+    width: 150px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    animation:stick 5s linear infinite;
+    margin-top: 350px ;
+    position: fixed; 
+    
+}
+@keyframes boll {
+    0% {
+        top:0;
+    }
+    100%{
+        top:70%;
+        float: right;
+       
+    }
+    
+}
+
+@keyframes stick {
+    to{
+    margin-left: 340px;
+    }
+    
+    
+}
+.footer {
+
+    
+}
+.text {
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+.symbol {
+    float: right;
+}
+.symbol a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav{
+    
+}
+.nav ul {
+    display: flex;
+}
+.nav ul li{
+    list-style: none;
+    padding: 20px;
+    position: relative;
+
+    
+}
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+
+.submenu{
+    display: none;
+    
+
+}
+.submenu ul{
+    display: block;
+    position: absolute;
+    background-color: black;
+
+    
+}
+.submenu ul li{
+    padding: 0;
+    margin-left: -2rem;
+    margin-bottom: 1rem;   
+     border-left: 0.2rem solid blue;
+
+}
+.submenu ul li a{
+    padding: 2px;
+    color: palegreen;
+
+}
+.nav ul li:hover .submenu{
+    display: block;
+    transition: 0.5s;
+    
+}
+/* .nav ul li a:hover .submenu{
+    display: block;
+    transition: 0.5s;
+} */
+.parent {
+    height: 200px;
+    width: 150px;
+    border: 0.2rem solid blue;
+    border-radius: 5rem 10rem ;
+    margin: 500px 300px;
+
+}
+.gridParent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: minmax(100px,auto);
+    grid-gap: 1em;
+}
+.gridChild {
+    background: #192a61;
+    padding: 1rem;
+    color: white;
+}
+.gridChild:nth-child(odd){
+    background: #189771;
+
+}
+.gridChild:nth-child(1){
+    grid-column: 2/4;
+    grid-row: 2/3;
+    justify-items: end;
+    align-items: end;
+}
+
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./imge/sky.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x:hidden ;
+   
+
+}
+
+.highwayroad {
+    height: 200px;
+    width: 500%;
+    display: block;
+    background-image: url(./imge/road.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: highway 5s infinite linear;
+    
+}
+@keyframes highway {
+    100%{
+        transform: translateX(-400px);
+    }
+}
+.city{
+    height: 200px;
+    width: 100%;
+    background-image: url(./imge/city.png);
+    position: absolute;
+    bottom: 200px;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    animation: city 5s linear infinite;
+}
+@keyframes city {
+    100%{
+        transform: translateX(-100px);
+    }
+    
+}
+
+.car {
+    width: 100%;;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+   
+    img{ 
+        
+
+        width: 20%;
+        animation: car 5s linear infinite;
+    }
+}
+@keyframes car {
+    100%{
+        transform: translateX(-1px);
+    }
+    50%{
+        transform: translateX(1px);
+    }
+    0%{
+        transform: translateX(-1px);
+    }
+}
+.wheel {
+    left: 10%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+    img{
+        width: 50px;
+        height: 50px;
+        animation: whl 1s infinite linear;
+        
+    }
+    .front {
+        left:   51px;
+        position: absolute;
+        
+    }
+    .back {
+        left: -112px;
+        position: absolute;
+
+    }
+    
+}
+@keyframes whl {
+    100%{
+        transform: rotate(360deg);
+    }
+   
+}
+.makkah {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    width: 40%;
+    height: 200vh;
+    color: white;
+    h1{
+        text-align: center;font-size: 4em;
+        background-image: url(imge/sky.jpg);
+        color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-clip: text;
+    }
+}
+.carousel {
+    width: 50%;
+    margin: auto;
+    height:50vh;
+    border-radius: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    img{
+        flex: 0 0 100%;
+        height: 100%;
+        object-fit: cover;
+        position: sticky;
+        left: 0;
+        scroll-snap-align: start;
+    }
+}
+.card {
+    height: 70vh;
+    width: 50%;
+    margin: auto;
+    border: .1em solid #999;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px 5px #c4c1c1;
+    img{
+        height: 10em;
+        width: 20em;
+    }
+}
+.card-body {
+    h1 {
+        font-size:2em ;}
+    p {
+        font-size: 1em;
+        text-align: center;
+    }
+}
